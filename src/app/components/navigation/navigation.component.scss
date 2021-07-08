@@ -1,0 +1,31 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.navigation-bar {
+  position: -webkit-fixed; /* Safari */
+  position: fixed;
+  top: 0; 
+  z-index: 1000; 
+  background-color: transparent;
+  transition: background-color 200ms linear;
+  color: white;
+}
+
+.navigation-bar.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  color: green;
+}
+
+.content-container {
+  min-height: 100vh
+}
