@@ -1,0 +1,111 @@
+.store-background-image {
+    width: 100%;
+    height: 75vh;
+    background-image: url("/assets/barbearia.png") ;
+    background-position: center;
+    -webkit-backgroud-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.store-presentation {
+    height: 100%;
+    font-size: 36px;
+    letter-spacing: 2px;
+    color: goldenrod;
+}
+
+.store-name span {
+    white-space: pre;
+}
+
+section[class]:not(:first-child) {
+    margin: 30px 0;
+}
+
+section h1 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #423a38;
+    padding-bottom: 10px;
+}
+
+section h1:after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+section[class] > div[class] {
+    margin: 0 20%
+}
+
+.staff-information {
+    width: 100%;
+}
+
+.staff-image img {
+    width: 100%;
+}
+
+.staff-info {
+    text-align: right;
+}
+
+.swap {
+    order: 2;
+}
+
+.left {
+    text-align: left;
+}
+
+.staff-name-header {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: goldenrod;
+}
+
+.staff-name-subheader {
+    font-size: 16px;
+}
+
+.staff-socials {
+    text-align: center;
+}
+
+.staff-socials button {
+    color: goldenrod;
+}
+
+.service-card {
+    background-color: #423a38;
+    text-align: center;
+}
+
+.service-card .service-type {
+    font-size: 24px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.service-card .service-price {
+    font-size: 16px;
+    color: goldenrod;
+    letter-spacing: 2px;
+}
+
+/* Medium and below screens */
+@media (max-width: 1024px) {
+    .history-store-logo {
+        order: 2;
+    }
+
+    .staff-image {
+        order: 2;
+    }
+}

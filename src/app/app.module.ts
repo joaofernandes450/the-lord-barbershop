@@ -20,17 +20,23 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 
+//Community Modules
+import { SwiperModule } from 'swiper/angular';
+
 //Components
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { StoreComponent } from './components/store/store.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomepageComponent,
-    FooterComponent
+    FooterComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

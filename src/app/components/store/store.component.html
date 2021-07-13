@@ -1,0 +1,111 @@
+<div class="container" style="height: 100%;">
+    <section class="store-background-image">
+        <div class="store-presentation" fxLayout fxLayoutAlign="center ">
+            <div class="store-name" fxFlex fxLayout="column" fxLayoutAlign="center ">
+                <span>The Lord Barbershop</span>
+            </div>
+
+            <div class="empty">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="history">
+        <h1>A NOSSA HISTÓRIA</h1>
+        <div class="history-container" fxLayout fxLayoutAlign="center center" fxLayoutGap="100px"
+            fxLayout.lt-md="column" fxLayoutGap.lt-md="25px">
+            <div class="history-store-logo">
+                <img src="assets/logo.png">
+            </div>
+
+            <div class="history-store-text">
+                <p>The Lord Barbershop é uma barbearia para o Homem Moderno, no mercado desde 2019.</p>
+                <p>Começou numa pequena aldeia onde a grande maioria estava habituada a “antiga” e típica barbearia.</p>
+                <p>Com o objetivo de alterar esse paradigma, nasceu uma barbearia, com espaço de lazer, com serviços de
+                    beleza, oferecendo assim o melhor conforto para o cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="staff">
+        <h1>OS NOSSOS BARBEIROS</h1>
+        <div class="staff-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="100px">
+            <div class="staff-information" fxLayout fxLayoutGap="100px" fxLayout.lt-md="column" fxLayoutGap.lt-md="25px"
+                *ngFor="let staff of currentStaff; odd as isOdd;">
+                <div class="staff-image" [ngClass]="{'swap': isOdd}">
+                    <img src="{{staff.picture}}">
+                </div>
+
+                <div class="staff-info" fxFlex fxLayout="column" fxLayoutAlign="center " fxLayoutGap="12px"
+                    [ngClass]="{'left': isOdd}">
+                    <div class="staff-name">
+                        <p class="staff-name-header">{{staff.name}}</p>
+                        <p class="staff-name-subheader">{{staff.position}}</p>
+                    </div>
+
+                    <div class="staff-description">
+                        <p>{{staff.description}}</p>
+                        <p>{{staff.description}}</p>
+                        <p>Long text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,Long
+                            text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,Long text,
+                            Long text,
+                            Long text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,
+                        </p>
+                        <p>{{staff.description}}</p>
+                    </div>
+
+                    <div class="staff-socials">
+                        <a href="https://www.instagram.com/thelordbarbersh0p/">
+                            <button mat-icon-button color="primary">
+                                <mat-icon>facebook</mat-icon>
+                            </button>
+                        </a> <a href="https://www.instagram.com/thelordbarbersh0p/">
+                            <button mat-icon-button color="primary">
+                                <mat-icon>facebook</mat-icon>
+                            </button>
+                        </a> <a href="https://www.instagram.com/thelordbarbersh0p/">
+                            <button mat-icon-button color="primary">
+                                <mat-icon>facebook</mat-icon>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h1>OS NOSSOS SERVIÇOS</h1>
+        <div class="services-container">
+            <div class="service-grid" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px grid">
+                <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="30%" *ngFor="let num of [1,2,3,4,5,6,7]">
+                    <mat-card class="service-card mat-elevation-z4">
+                        <img src="assets/logo.png">
+                        <mat-card-content fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+                            <div class="service-type">
+                                Cabelo
+                            </div>
+
+                            <div class="service-price">
+                                {{ 7 | currency:'EUR'}}
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galery">
+        <h1>GALERIA</h1>
+        <div class="swiper-container">
+            <swiper [config]="swiperConfig">
+                <ng-template swiperSlide *ngFor="let s of galleryImages"><img src="{{s}}"
+                        style="width: 100%; height: 300px;">
+                </ng-template>
+
+            </swiper>
+        </div>
+    </section>
+</div>

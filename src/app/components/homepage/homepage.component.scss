@@ -51,47 +51,54 @@
     margin-right: auto;
 }
 
-.dashboard-card {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-}
-  
-.dashboard-card-content {
-    text-align: center;
+mat-card {
+    max-width: 300px;
+    background: #423a38;
+    -webkit-transition:  0.3s ease-out;
+    -moz-transition:  0.3s ease-out;
+    transition:  0.3s ease-out;
 }
 
-mat-card img{
-    max-height: 100%;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
+.text-content {
+    color: #ffd740;
 }
 
-mat-card img:hover {
-    opacity: 0.5;
+mat-card:hover {
     cursor: pointer;
+    background: #ffd740;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-mat-card-content {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    visibility: hidden;
-    cursor: none;
-    pointer-events: none;
-    cursor: pointer;
+mat-card:hover .text-content {
+    color: #423a38;
 }
+
+// mat-card img{
+//     max-height: 100%;
+//     min-width: 50%;
+//     -webkit-transition: opacity 0.25s ease-in-out;
+//     -moz-transition: opacity 0.25s ease-in-out;
+//     transition: opacity 0.25s ease-in-out;
+// }
+
+// mat-card-content {
+//     color: white;
+//     font-size: 20px;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     cursor: none;
+//     pointer-events: none;
+//     cursor: pointer;
+// }
   
-mat-card img:hover + mat-card-content {
-    visibility: visible;
-}
+// mat-card img:hover + mat-card-content {
+//     visibility: visible;
+// }
 
 .text-content {
     text-align: center;
@@ -102,3 +109,15 @@ mat-card img:hover + mat-card-content {
         visibility: visible;
     }
 }
+
+// .dashboard-card {
+//     position: absolute;
+//     top: 15px;
+//     left: 15px;
+//     right: 15px;
+//     bottom: 15px;
+// }
+  
+// .dashboard-card-content {
+//     text-align: center;
+// }

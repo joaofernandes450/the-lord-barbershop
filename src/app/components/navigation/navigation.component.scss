@@ -23,7 +23,12 @@
 .navigation-bar.scrolled {
   background-color: #fff !important;
   transition: background-color 200ms linear;
-  color: green;
+  color: goldenrod;
+}
+
+.navigation-logo img {
+  width: 60px;
+  height: auto;
 }
 
 .content-container {

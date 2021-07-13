@@ -17,14 +17,44 @@
     <div #stores class="stores">
         <h1>AS NOSSAS BARBEARIAS</h1>
         <div class="stores-container mat-elevation-z0">
-            <mat-grid-list cols="2" [rowHeight]="rowHeight" [gutterSize]="'10px'">
+            <div class="store-layout" fxFlex fxLayout fxLayoutAlign="center center" fxLayoutGap="20px"
+                fxLayout.lt-md="column">
+                <mat-card class="mat-elevation-z0" *ngFor="let store of availableStores" (click)="openStore(store)">
+                    <img mat-card-image src="{{store.image}}">
+                    <mat-card-content>
+                        <div class="text-content" fxLayout="column" fxLayoutGap="20px"
+                            fxLayoutAlign="space-between start">
+                            <h2>{{store.name}}</h2>
+                            <div fxLayout fxLayoutGap="10px">
+                                <mat-icon>place</mat-icon>
+                                <h4>{{store.address}}</h4>
+                            </div>
+                            <div fxLayout fxLayoutGap="10px">
+                                <mat-icon>email</mat-icon>
+                                <h4>{{store.email}}</h4>
+                            </div>
+                            <div fxLayout fxLayoutGap="10px">
+                                <mat-icon>phone</mat-icon>
+                                <h4>{{store.phoneNumber}}</h4>
+                            </div>
+                            <!-- <div class="card-socials">
+                                <button mat-flat-button color="accent">
+                                    <mat-icon>arrow_forward</mat-icon>
+                                </button>
+                            </div> -->
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <!-- <mat-grid-list cols="2" [gutterSize]="'10px'">
                 <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
                     <mat-card class="mat-elevation-z0" (click)="storeClicked(card)">
-                        <img mat-card-image src="assets/barbearia2.png">
+                        <img mat-card-image src="assets/p.png">
                         <mat-card-content>
-                            <div class="text-content" fxFlex fxLayout="column" fxLayoutGap="20px"
-                                fxLayoutAlign="center center">
+                            <div class="text-content" fxLayout="column" fxLayoutGap="20px"
+                                fxLayoutAlign=" center">
                                 <span>{{card.title}}</span>
+
 
                                 <div class="card-socials">
                                     <button mat-flat-button color="accent">
@@ -35,7 +65,7 @@
                         </mat-card-content>
                     </mat-card>
                 </mat-grid-tile>
-            </mat-grid-list>
+            </mat-grid-list> -->
         </div>
     </div>
 </div>
