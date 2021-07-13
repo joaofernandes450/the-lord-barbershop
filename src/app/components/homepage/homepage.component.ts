@@ -66,7 +66,7 @@ export class HomepageComponent implements OnInit {
    * @param element - HTML Element
    */
   scroll(element: HTMLElement): void {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest'})
   }
 
   openReservations(): void {

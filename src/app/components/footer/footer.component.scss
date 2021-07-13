@@ -1,7 +1,6 @@
 mat-toolbar {
     background-color: #18191a;
     color: white;
-    min-height: 600px;
     min-width: 100%;
     height: auto;
 }
@@ -25,11 +24,35 @@ a:hover {
     text-decoration: underline;
 }
 
+.footer-row {
+    margin-top: 20px;
+}
+
+.footer-partners img {
+    max-width: 150px;
+}
+
 .footer-column {
     word-break: break-all;
-    white-space:normal;
+    white-space: normal;
+    margin-bottom: 20px;
+}
+
+.footer-column img {
+    width: 200px;
+}
+
+.copyright {
+    font-size: 12px;
 }
 
 h2 {
     padding: 0 16px;
+}
+
+/* Medium and below screens */
+@media (max-width: 1024px) {
+    .footer-copyright {
+        text-align: center;
+    }
 }

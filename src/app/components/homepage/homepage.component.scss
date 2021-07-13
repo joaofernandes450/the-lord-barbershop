@@ -52,11 +52,12 @@
 }
 
 mat-card {
-    max-width: 300px;
+    max-width: 250px;
     background: #423a38;
     -webkit-transition:  0.3s ease-out;
     -moz-transition:  0.3s ease-out;
     transition:  0.3s ease-out;
+    cursor: pointer;
 }
 
 .text-content {
@@ -99,10 +100,6 @@ mat-card:hover .text-content {
 // mat-card img:hover + mat-card-content {
 //     visibility: visible;
 // }
-
-.text-content {
-    text-align: center;
-}
 
 @media (hover: none) {
     mat-card-content {
