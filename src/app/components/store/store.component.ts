@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Staff, Store } from 'src/app/data/stores';
+import { DataService } from 'src/app/services/data/data.service';
 
 import SwiperCore, {
   Navigation,
@@ -10,14 +13,6 @@ import SwiperCore, {
 } from 'swiper/core';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-export interface Staff {
-  name: string;
-  position: string;
-  description: string;
-  socials?: string;
-  picture: string;
-}
-
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -25,6 +20,9 @@ export interface Staff {
 })
 export class StoreComponent implements OnInit {
 
+  storeRoute: any;
+
+  currentStore!: Store;
   currentStaff: Staff[] = [];
 
   galleryImages: string[] = [
@@ -52,10 +50,15 @@ export class StoreComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private dataService: DataService) {
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.storeRoute = params.get('store');
+    })
+  }
 
   ngOnInit(): void {
     this.populateStaff();
+    this.currentStore = this.dataService.getStores().find(x => x.route === this.storeRoute)!;
   }
 
   populateStaff(): void {
