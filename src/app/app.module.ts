@@ -29,6 +29,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StoreComponent } from './components/store/store.component';
 import { RouterModule } from '@angular/router';
+import { ReservationDialogComponent } from './components/reservation-dialog/reservation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RouterModule } from '@angular/router';
     NavigationComponent,
     HomepageComponent,
     FooterComponent,
-    StoreComponent
+    StoreComponent,
+    ReservationDialogComponent
   ],
   imports: [
     BrowserModule,

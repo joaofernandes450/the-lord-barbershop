@@ -1,9 +1,11 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Store } from 'src/app/data/stores';
 import { DataService } from 'src/app/services/data/data.service';
+import { ReservationDialogComponent } from '../reservation-dialog/reservation-dialog.component';
 
 // export interface Store {
 //   image: string;
@@ -41,7 +43,7 @@ export class HomepageComponent implements OnInit {
 
   availableStores: Store[] = [];
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private dataService: DataService) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private dataService: DataService, private dialog: MatDialog) {
     // this.populateStores();
   }
 
@@ -73,7 +75,10 @@ export class HomepageComponent implements OnInit {
   }
 
   openReservations(): void {
+    const dialogRef = this.dialog.open(ReservationDialogComponent);
 
+    dialogRef.afterClosed().subscribe(result => {
+    });
   }
 
   openStore(store: Store): void {
