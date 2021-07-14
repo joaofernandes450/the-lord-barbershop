@@ -20,6 +20,11 @@
   color: white;
 }
 
+.navigation-bar .mat-flat-button {
+  background-color: goldenrod;
+  color: white;
+}
+
 .navigation-bar.scrolled {
   background-color: #fff !important;
   transition: background-color 200ms linear;
@@ -41,4 +46,11 @@ img {
 
 ::ng-deep .mat-button-focus-overlay {
   background-color: transparent!important;
+}
+
+/* Medium and below screens */
+@media (max-width: 1024px) {
+  .navigation-logo {
+    translate: 12px;
+  }
 }

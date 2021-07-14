@@ -5,9 +5,13 @@ mat-toolbar {
     height: auto;
 }
 
+.mat-toolbar-single-row {
+    padding: 0;
+}
+
 mat-list-item {
     color: lightgrey !important; 
-    min-width: 350px;
+    min-width: 100%;
 }
 
 mat-divider {

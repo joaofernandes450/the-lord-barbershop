@@ -13,14 +13,11 @@
     font-size: 36px;
     letter-spacing: 2px;
     color: goldenrod;
-}
-
-.store-name span {
-    white-space: pre;
+    line-height: 30px;
 }
 
 section[class]:not(:first-child) {
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
 section h1 {
