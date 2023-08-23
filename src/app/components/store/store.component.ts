@@ -1,22 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Staff, Store } from 'src/app/data/stores';
 import { DataService } from 'src/app/services/data/data.service';
 
-// import SwiperCore, {
-//   Navigation,
-//   Pagination,
-//   Scrollbar,
-//   A11y,
-//   Autoplay,
-//   Swiper
-// } from 'swiper/modules/navigation';
-// import {  } from 'swiper/modules';
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
-
+// Swiper
+import Swiper from 'swiper';
+import { SwiperOptions } from 'swiper/types/swiper-options';
 import { register } from 'swiper/element/bundle';
-
-register();
 
 @Component({
   selector: 'app-store',
@@ -24,6 +14,8 @@ register();
   styleUrls: ['./store.component.scss']
 })
 export class StoreComponent implements OnInit {
+
+  @ViewChild("swiper", { static: false }) swiper?: ElementRef<{ swiper: Swiper }>
 
   storeRoute: any;
 
@@ -35,7 +27,7 @@ export class StoreComponent implements OnInit {
   ];
 
   // https://swiperjs.com/swiper-api#modules
-  swiperConfig: any = {
+  swiperConfig: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: { clickable: true },
@@ -44,14 +36,15 @@ export class StoreComponent implements OnInit {
     breakpoints: {
       // when window width is >= 480px
       480: {
-        slidesPerView: 2,
-        spaceBetween: 10
+        slidesPerView: 2
       },
       // when window width is >= 1024px
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 10
-      },
+        slidesPerView: 3
+      }
+    },
+    on: {
+      init() {}
     }
   }
 
@@ -66,10 +59,17 @@ export class StoreComponent implements OnInit {
     this.currentStore = this.dataService.getStores().find(x => x.route === this.storeRoute)!;
   }
 
+  ngAfterViewInit() {
+    this.swiperInitConfig();
+  }
+
   swiperInitConfig(): void {
-    const swiperEl = document.querySelector('swiper-container');
-    // Object.assign(swiperEl, this.swiperConfig);
-    // swiperEl.initialize();
+    register();
+    if (this.swiper?.nativeElement) {
+      Object.assign(this.swiper?.nativeElement, this.swiperConfig);
+    }
+    // @ts-ignore
+    setTimeout(() => this.swiper?.nativeElement.initialize());
   }
 
   populateStaff(): void {
@@ -97,13 +97,5 @@ export class StoreComponent implements OnInit {
         picture: "/assets/staff/tiago_azevedo.png"
       },
     )
-  }
-
-  onSwiper(swiper: any) {
-    console.log(swiper);
-  }
-
-  onSlideChange() {
-    console.log('slide change');
   }
 }

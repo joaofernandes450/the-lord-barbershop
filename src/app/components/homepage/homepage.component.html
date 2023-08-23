@@ -85,118 +85,26 @@
               <div
                 class="text-content"
                 fxLayout="column"
-                fxLayoutGap="5px"
+                fxLayoutGap="10px"
                 fxLayoutAlign="space-between start"
               >
                 <h2>{{ store.name }}</h2>
-                <div fxLayout fxLayoutGap="10px">
+                <div fxLayout fxLayoutAlign=" center" fxLayoutGap="10px">
                   <mat-icon>place</mat-icon>
-                  <h4>{{ store.address }}</h4>
+                  <span>{{ store.address }}</span>
                 </div>
-                <div fxLayout fxLayoutGap="10px">
+                <div fxLayout fxLayoutAlign=" center" fxLayoutGap="10px">
                   <mat-icon>email</mat-icon>
-                  <h4>{{ store.email }}</h4>
+                  <span>{{ store.email }}</span>
                 </div>
-                <div fxLayout fxLayoutGap="10px">
+                <div fxLayout fxLayoutAlign=" center" fxLayoutGap="10px">
                   <mat-icon>phone</mat-icon>
-                  <h4>{{ store.phoneNumber }}</h4>
+                  <span>{{ store.phoneNumber }}</span>
                 </div>
               </div>
             </mat-card-content>
           </mat-card>
-
-          <!-- <mat-card
-            appearance="outlined"
-            class="mat-elevation-z0 store-card"
-            *ngFor="let store of availableStores"
-            (click)="openStore(store)"
-          >
-            <mat-card-header>
-              <mat-card-title>{{ store.name }}</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="{{ store.image }}" />
-            <mat-card-content>
-              <div
-                class="text-content"
-                fxLayout="column"
-                fxLayoutGap="20px"
-                fxLayoutAlign="space-between start"
-              >
-                <h2>{{ store.name }}</h2>
-                <div fxLayout fxLayoutGap="10px">
-                  <mat-icon>place</mat-icon>
-                  <h4>{{ store.address }}</h4>
-                </div>
-                <div fxLayout fxLayoutGap="10px">
-                  <mat-icon>email</mat-icon>
-                  <h4>{{ store.email }}</h4>
-                </div>
-                <div fxLayout fxLayoutGap="10px">
-                  <mat-icon>phone</mat-icon>
-                  <h4>{{ store.phoneNumber }}</h4>
-                </div>
-              </div>
-            </mat-card-content>
-          </mat-card> -->
         </div>
-
-        <!-- <div
-          class="store-layout"
-          fxFlex
-          fxLayout
-          fxLayoutAlign="center center"
-          fxLayoutGap="20px"
-          fxLayout.lt-sm="column"
-        >
-          <mat-card
-            appearance="outlined"
-            class="mat-elevation-z0 example-card"
-            *ngFor="let store of availableStores"
-            (click)="openStore(store)"
-          >
-            <mat-card-header>
-              <mat-card-title-group>
-                <mat-card-title>{{ store.name }}</mat-card-title>
-                <mat-card-subtitle>Extra large</mat-card-subtitle>
-                <img mat-card-xl-image src="{{ store.image }}" />
-              </mat-card-title-group>
-            </mat-card-header>
-            <mat-card-content>
-              <div fxLayout fxLayoutGap="10px">
-                <mat-icon>place</mat-icon>
-                <h4>{{ store.address }}</h4>
-              </div>
-              <div fxLayout fxLayoutGap="10px">
-                <mat-icon>email</mat-icon>
-                <h4>{{ store.email }}</h4>
-              </div>
-              <div fxLayout fxLayoutGap="10px">
-                <mat-icon>phone</mat-icon>
-                <h4>{{ store.phoneNumber }}</h4>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div> -->
-        <!-- <mat-grid-list cols="2" [gutterSize]="'10px'">
-                    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-                        <mat-card class="mat-elevation-z0" (click)="storeClicked(card)">
-                            <img mat-card-image src="assets/p.png">
-                            <mat-card-content>
-                                <div class="text-content" fxLayout="column" fxLayoutGap="20px"
-                                    fxLayoutAlign=" center">
-                                    <span>{{card.title}}</span>
-    
-    
-                                    <div class="card-socials">
-                                        <button mat-flat-button color="accent">
-                                            <mat-icon>arrow_forward</mat-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </mat-card-content>
-                        </mat-card>
-                    </mat-grid-tile>
-                </mat-grid-list> -->
       </div>
     </div>
   </section>

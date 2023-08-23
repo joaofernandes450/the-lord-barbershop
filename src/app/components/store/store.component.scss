@@ -1,108 +1,139 @@
 .store-background-image {
-    width: 100%;
-    height: 75vh;
-    background-image: url("/assets/barbearia.png") ;
-    background-position: center;
-    -webkit-backgroud-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  width: 100%;
+  height: 75vh;
+  background-image: url("/assets/barbearia.png");
+  background-position: center;
+  -webkit-backgroud-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .store-presentation {
-    height: 100%;
-    font-size: 36px;
-    letter-spacing: 2px;
-    color: goldenrod;
-    line-height: 30px;
+  height: 100%;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: goldenrod;
+  line-height: 30px;
 }
 
 section[class]:not(:first-child) {
-    margin: 25px 0;
+  margin: 25px 0;
 }
 
 section h1 {
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #423a38;
-    padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #423a38;
+  padding-bottom: 10px;
 }
 
 section h1:after {
-    content: '';
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 150px;
-    margin: 10px auto;
+  content: "";
+  background: #333;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto;
 }
 
 section[class] > div[class] {
-    margin: 0 20%
+  margin: 0 20%;
+}
+
+.services-container {
+  margin: 0 30% !important;
 }
 
 .staff-information {
-    width: 100%;
+  width: 100%;
 }
 
 .staff-image img {
-    width: 100%;
+  width: 100%;
 }
 
 .staff-info {
-    text-align: right;
+  text-align: right;
 }
 
 .swap {
-    order: 2;
+  order: 2;
 }
 
 .left {
-    text-align: left;
+  text-align: left;
 }
 
 .staff-name-header {
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: goldenrod;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: goldenrod;
 }
 
 .staff-name-subheader {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .staff-socials {
-    text-align: center;
+  text-align: center;
 }
 
 .staff-socials button {
-    color: goldenrod;
+  color: goldenrod;
 }
 
 .service-card {
-    background-color: #423a38;
-    text-align: center;
+  background-color: #423a38;
+  text-align: center;
 }
 
 .service-card .service-type {
-    font-size: 24px;
-    color: white;
-    letter-spacing: 2px;
+  font-size: 24px;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .service-card .service-price {
-    font-size: 16px;
-    color: goldenrod;
-    letter-spacing: 2px;
+  font-size: 16px;
+  color: goldenrod;
+  letter-spacing: 2px;
 }
 
 /* Medium and below screens */
 @media (max-width: 1024px) {
-    .history-store-logo {
-        order: 2;
-    }
+  .history-store-logo {
+    order: 2;
+  }
 
-    .staff-image {
-        order: 2;
-    }
+  .staff-image {
+    order: 2;
+  }
+
+  .services-container {
+    margin: 0 20% !important;
+  }
 }
+
+// swiper-container {
+//   width: 90%;
+//   height: 100%;
+// }
+
+// swiper-slide {
+//   text-align: center;
+//   font-size: 18px;
+//   background: lightgray;
+//   height: 5rem;
+//   width: 5rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// swiper-slide img {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
