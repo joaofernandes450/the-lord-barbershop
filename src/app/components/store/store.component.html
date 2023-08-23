@@ -100,12 +100,15 @@
     <section class="galery">
         <h1>GALERIA</h1>
         <div class="swiper-container">
-            <swiper [config]="swiperConfig">
+            <swiper-container>
+                <swiper-slide *ngFor="let s of galleryImages"><img src="{{s}}" style="width: 100%; height: 300px;">
+                </swiper-slide>
+            </swiper-container>
+            <!-- <swiper [config]="swiperConfig">
                 <ng-template swiperSlide *ngFor="let s of galleryImages"><img src="{{s}}"
                         style="width: 100%; height: 300px;">
                 </ng-template>
-
-            </swiper>
+            </swiper> -->
         </div>
     </section>
 </div>

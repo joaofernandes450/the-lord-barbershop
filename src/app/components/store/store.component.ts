@@ -3,15 +3,20 @@ import { ActivatedRoute } from '@angular/router';
 import { Staff, Store } from 'src/app/data/stores';
 import { DataService } from 'src/app/services/data/data.service';
 
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-  Swiper
-} from 'swiper/core';
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+// import SwiperCore, {
+//   Navigation,
+//   Pagination,
+//   Scrollbar,
+//   A11y,
+//   Autoplay,
+//   Swiper
+// } from 'swiper/modules/navigation';
+// import {  } from 'swiper/modules';
+// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @Component({
   selector: 'app-store',
@@ -61,6 +66,12 @@ export class StoreComponent implements OnInit {
     this.currentStore = this.dataService.getStores().find(x => x.route === this.storeRoute)!;
   }
 
+  swiperInitConfig(): void {
+    const swiperEl = document.querySelector('swiper-container');
+    // Object.assign(swiperEl, this.swiperConfig);
+    // swiperEl.initialize();
+  }
+
   populateStaff(): void {
     this.currentStaff.push(
       {
@@ -91,8 +102,8 @@ export class StoreComponent implements OnInit {
   onSwiper(swiper: any) {
     console.log(swiper);
   }
+
   onSlideChange() {
     console.log('slide change');
   }
-
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,14 +21,14 @@ import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-m
 import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 
 //Community Modules
-import { SwiperModule } from 'swiper/angular';
+import { register } from 'swiper/element/bundle';
+register();
 
 //Components
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StoreComponent } from './components/store/store.component';
-import { RouterModule } from '@angular/router';
 import { ReservationDialogComponent } from './components/reservation-dialog/reservation-dialog.component';
 
 @NgModule({
@@ -54,10 +54,10 @@ import { ReservationDialogComponent } from './components/reservation-dialog/rese
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatDialogModule,
-    SwiperModule
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
