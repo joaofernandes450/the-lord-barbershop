@@ -1,43 +1,43 @@
 .homepage-container {
-    height: 100%;
+  height: 100%;
 }
 
 .logo {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    // background-image: url("/assets/header.jpg") ;
-    background-position: center;
-    -webkit-backgroud-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  // background-image: url("/assets/header.jpg") ;
+  background-position: center;
+  -webkit-backgroud-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .header-logo-left img,
 .header-logo-right img {
-    width: 150px;
+  width: 150px;
 }
 
 .header-slider {
-    background-color: #423a38;
-    text-align: center;
-    // position: absolute;
+  background-color: #423a38;
+  text-align: center;
+  // position: absolute;
 }
 
 .header-slider-container {
-    margin: 10% 20%; // Better looking
+  margin: 10% 20%; // Better looking
 }
 
 .the-lord img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .scroll-section-button {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 20px;
 }
 
 // .scroll-button {
@@ -49,56 +49,65 @@
 // }
 
 .stores {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .stores h1 {
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #333;
-    padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333;
+  padding-bottom: 10px;
 }
 
 .stores h1:after {
-    content: '';
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 150px;
-    margin: 10px auto;
+  content: "";
+  background: #333;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto;
 }
 
 .stores-container {
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-mat-card {
-    max-width: 250px;
-    background: #423a38;
-    -webkit-transition:  0.3s ease-out;
-    -moz-transition:  0.3s ease-out;
-    transition:  0.3s ease-out;
-    cursor: pointer;
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+.store-card {
+  max-width: 300px;
+  background: #423a38;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+  img {
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 80%;
+  }
 }
 
 .text-content {
-    color: #ffd740;
+  margin-top: 16px;
+  color: #ffd740;
 }
 
-mat-card:hover {
-    cursor: pointer;
-    background: #ffd740;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    transition: background 0.3s ease;
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+.store-card:hover {
+  cursor: pointer;
+  background: #ffd740;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-mat-card:hover .text-content {
-    color: #423a38;
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+.store-card:hover .text-content {
+  color: #423a38;
 }
 
 // mat-card img{
@@ -121,15 +130,16 @@ mat-card:hover .text-content {
 //     pointer-events: none;
 //     cursor: pointer;
 // }
-  
+
 // mat-card img:hover + mat-card-content {
 //     visibility: visible;
 // }
 
 @media (hover: none) {
-    mat-card-content {
-        visibility: visible;
-    }
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+  mat-card-content {
+    visibility: visible;
+  }
 }
 
 // .dashboard-card {
@@ -139,25 +149,30 @@ mat-card:hover .text-content {
 //     right: 15px;
 //     bottom: 15px;
 // }
-  
+
 // .dashboard-card-content {
 //     text-align: center;
 // }
 
 /* Medium and below screens */
 @media (max-width: 768px) {
-    .header-logo-left,
-    .header-logo-right{
-        display: none !important;
-    }
-    .scroll-section-button {
-        display: none !important;
-    }
+  .header-logo-left,
+  .header-logo-right {
+    display: none !important;
+  }
+  .scroll-section-button {
+    display: none !important;
+  }
 }
 
 /* Small and below screens */
 @media (max-width: 1024px) {
-    .temp img {
-        width: 75% !important;
-    }
+  .temp img {
+    width: 75% !important;
+  }
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
 }

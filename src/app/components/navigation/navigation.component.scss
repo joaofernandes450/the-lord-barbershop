@@ -20,7 +20,7 @@
   color: white;
 }
 
-.navigation-bar .mat-flat-button {
+.navigation-bar .mat-mdc-unelevated-button {
   background-color: goldenrod;
   color: white;
 }
@@ -44,6 +44,7 @@ img {
   width: 100%;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
 ::ng-deep .mat-button-focus-overlay {
   background-color: transparent!important;
 }
