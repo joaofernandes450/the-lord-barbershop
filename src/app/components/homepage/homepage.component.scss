@@ -49,7 +49,11 @@
 // }
 
 .stores {
-  margin: 30px 0;
+  padding: 30px 0;
+}
+
+.stores-v2 {
+  background-image: url("/assets/backgrounds/bg-noise-grey.jpg");
 }
 
 .stores h1 {
@@ -60,6 +64,10 @@
   padding-bottom: 10px;
 }
 
+.stores-v2 h1 {
+  color: white;
+}
+
 .stores h1:after {
   content: "";
   background: #333;
@@ -67,6 +75,10 @@
   height: 3px;
   width: 150px;
   margin: 10px auto;
+}
+
+.stores-v2 h1:after {
+  background-color: white;
 }
 
 .stores-container {
@@ -94,6 +106,11 @@
 .text-content {
   margin-top: 16px;
   color: #ffd740;
+}
+
+.text-content-v2 {
+  color: white;
+  font-size: 18px;
 }
 
 /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
@@ -163,6 +180,9 @@
   .scroll-section-button {
     display: none !important;
   }
+  .store-image {
+    width: 100% !important;
+  }
 }
 
 /* Small and below screens */
@@ -170,9 +190,38 @@
   .temp img {
     width: 75% !important;
   }
+  .store-image {
+    width: 100% !important;
+  }
 }
 
 .example-card {
   max-width: 400px;
   margin-bottom: 8px;
+}
+
+.store-image {
+  width: 75%;
+  transition: all 0.25s;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.store-image:hover {
+  transform: translateY(-20px);
+  background-color: red;
+  cursor: pointer;
+}
+
+.google-maps {
+  margin-bottom: 0;
+  a {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+}
+
+.google-maps-image {
+  width: 100%;
+  height: auto;
 }
