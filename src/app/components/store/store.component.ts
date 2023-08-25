@@ -78,7 +78,7 @@ export class StoreComponent implements OnInit {
         name: "Tiago Azevedo",
         position: "Barbeiro & CEO",
         description: "Sample text here",
-        picture: "/assets/staff/tiago_azevedo.png"
+        picture: "assets/staff/tiago_azevedo.png"
       },
     )
     this.currentStaff.push(
@@ -86,7 +86,7 @@ export class StoreComponent implements OnInit {
         name: "Tiago Maia",
         position: "Barbeiro",
         description: "Sample text here",
-        picture: "/assets/staff/tiago_maia.png"
+        picture: "assets/staff/tiago_maia.png"
       },
     )
     this.currentStaff.push(
@@ -94,7 +94,7 @@ export class StoreComponent implements OnInit {
         name: "Tiago Azevedo",
         position: "Barbeiro & CEO",
         description: "Sample text here",
-        picture: "/assets/staff/tiago_azevedo.png"
+        picture: "assets/staff/tiago_azevedo.png"
       },
     )
   }
