@@ -15,7 +15,8 @@ export interface Store {
     phoneNumber: string,
     image?: string,
     route: string,
-    staff?: Staff[]
+    staff?: Staff[],
+    mapsLink?: string
 }
 
 export const STORES: Store[] =
@@ -26,7 +27,8 @@ export const STORES: Store[] =
             email: 'barberthelord@gmail.com',
             phoneNumber: '+351 913 484 773',
             image: 'assets/barbearia2.png',
-            route: 'the-lord-barbershop'
+            route: 'the-lord-barbershop',
+            mapsLink: 'https://goo.gl/maps/b49PGPx3sfKRmiEb7'
         },
         {
             name: 'The Lord Privé',
@@ -34,6 +36,7 @@ export const STORES: Store[] =
             email: 'barberthelord2@gmail.com',
             phoneNumber: '+351 913 484 773',
             image: 'assets/barbearia.png',
-            route: 'the-lord-prive'
+            route: 'the-lord-prive',
+            mapsLink: 'https://goo.gl/maps/b49PGPx3sfKRmiEb7'
         }
     ]

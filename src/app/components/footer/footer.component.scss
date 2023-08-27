@@ -54,9 +54,46 @@ h2 {
     padding: 0 16px;
 }
 
+.footer-container {
+    background-image: url(../../../assets/backgrounds/bg-noise-black-80.jpg);
+    color: white;
+    padding: 20px;
+    .header-text {
+        font-size: 24px;
+    }
+    .footer-info {
+        width: 100%;
+        .store-button-anchor {
+            width: 50%;
+            .store-button {
+                border-color: white;
+                color: white;
+                cursor: pointer;
+                &:hover {
+                    background-color: goldenrod;
+                }
+                -webkit-transition: background-color 500ms linear;
+                -ms-transition: background-color 500ms linear;
+                transition: background-color 500ms linear;
+            }
+        }
+    }
+    .partners img {
+        max-width: 75px;
+    }
+    .footer-logo {
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
 /* Medium and below screens */
 @media (max-width: 1024px) {
     .footer-copyright {
         text-align: center;
+    }
+    .stores {
+        margin-top: 40px !important;
     }
 }
