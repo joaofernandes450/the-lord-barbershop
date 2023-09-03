@@ -3,7 +3,9 @@
 }
 
 .sidenav {
-  width: 200px;
+  // width: 200px;
+  width: 100%;
+  height: 50%;
 }
 
 .sidenav .mat-toolbar {
@@ -14,7 +16,7 @@
   position: -webkit-fixed; /* Safari */
   position: fixed;
   top: 0; 
-  z-index: 1000; 
+  z-index: 1250; 
   background-color: transparent;
   transition: background-color 200ms linear;
   color: white;
@@ -28,6 +30,10 @@
 .navigation-bar.scrolled {
   background-color: #fff !important;
   transition: background-color 200ms linear;
+  color: goldenrod;
+}
+
+.navigation-bar.open {
   color: goldenrod;
 }
 
@@ -54,4 +60,8 @@ img {
   .navigation-logo {
     translate: 12px;
   }
+}
+
+.mat-drawer-content {
+  z-index: auto !important;
 }

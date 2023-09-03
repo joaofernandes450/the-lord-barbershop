@@ -64,6 +64,7 @@ h2 {
     .footer-info {
         width: 100%;
         .store-button-anchor {
+            z-index: 0;
             width: 50%;
             .store-button {
                 border-color: white;

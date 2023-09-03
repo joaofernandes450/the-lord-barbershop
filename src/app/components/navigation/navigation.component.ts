@@ -2,6 +2,9 @@ import { Component, HostListener } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { DataService } from 'src/app/services/data/data.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ReservationDialogComponent } from '../reservation-dialog/reservation-dialog.component';
 
 @Component({
   selector: 'app-navigation',
@@ -9,6 +12,8 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+
+  sidenavOpen: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -26,7 +31,25 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, public dataService: DataService, private dialog: MatDialog) {
   }
 
+  openSidenavEvent(): void {
+    this.sidenavOpen = true;
+    const element = document.querySelector('.navigation-bar') as HTMLElement;
+    element.classList.add('open');
+  }
+
+  closeSidenavEvent(): void {
+    this.sidenavOpen = false;
+    const element = document.querySelector('.navigation-bar') as HTMLElement;
+    element.classList.remove('open');
+  }
+
+  openReservations(): void {
+    const dialogRef = this.dialog.open(ReservationDialogComponent);
+
+    dialogRef.afterClosed().subscribe(() => {
+    });
+  }
 }

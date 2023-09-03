@@ -77,7 +77,7 @@ export class HomepageComponent implements OnInit {
   openReservations(): void {
     const dialogRef = this.dialog.open(ReservationDialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
     });
   }
 
