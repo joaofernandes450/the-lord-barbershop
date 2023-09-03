@@ -77,7 +77,7 @@ export class StoreComponent implements OnInit {
       {
         name: "Tiago Azevedo",
         position: "Barbeiro & CEO",
-        description: "Sample text here",
+        description: "Na barbearia desde 2018, é um dos barbeiros fundadores.",
         picture: "assets/staff/tiago_azevedo.png"
       },
     )
@@ -85,7 +85,7 @@ export class StoreComponent implements OnInit {
       {
         name: "Tiago Maia",
         position: "Barbeiro",
-        description: "Sample text here",
+        description: "Na barbearia desde 2018, é um dos barbeiros fundadores.",
         picture: "assets/staff/tiago_maia.png"
       },
     )
@@ -93,7 +93,7 @@ export class StoreComponent implements OnInit {
       {
         name: "Tiago Azevedo",
         position: "Barbeiro & CEO",
-        description: "Sample text here",
+        description: "Na barbearia desde 2018, é um dos barbeiros fundadores.",
         picture: "assets/staff/tiago_azevedo.png"
       },
     )

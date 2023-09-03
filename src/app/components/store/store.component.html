@@ -30,30 +30,30 @@
 
     <section class="staff">
         <h1>OS NOSSOS BARBEIROS</h1>
-        <div class="staff-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="100px">
-            <div class="staff-information" fxLayout fxLayoutGap="100px" fxLayout.lt-md="column" fxLayoutGap.lt-md="25px"
+        <div class="staff-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="50px">
+            <div class="staff-information" fxLayout fxLayout.lt-md="column" fxLayoutGap.lt-md="25px"
                 *ngFor="let staff of currentStaff; odd as isOdd;">
-                <div fxLayout fxLayoutAlign="end " class="staff-image" [ngClass]="{'swap': isOdd}">
+                <div fxLayout fxLayoutAlign="end " class="staff-image" [ngClass]="{'': isOdd}">
                     <img src="{{staff.picture}}">
                 </div>
 
-                <div class="staff-info" fxFlex fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="12px"
-                    [ngClass]="{'left': isOdd}">
+                <div class="staff-info" fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px"
+                    [ngClass]="{'': isOdd}">
                     <div class="staff-name">
                         <p class="staff-name-header">{{staff.name}}</p>
                         <!-- <p class="staff-name-subheader">{{staff.position}}</p> -->
                     </div>
 
-                    <!-- <div class="staff-description">
+                    <div class="staff-description">
                         <p>{{staff.description}}</p>
-                        <p>{{staff.description}}</p>
+                        <!-- <p>{{staff.description}}</p>
                         <p>Long text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,Long
                             text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,Long text,
                             Long text,
                             Long text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,
                         </p>
-                        <p>{{staff.description}}</p>
-                    </div> -->
+                        <p>{{staff.description}}</p> -->
+                    </div>
 
                     <div class="staff-socials">
                         <a href="https://www.instagram.com/thelordbarbersh0p/">
