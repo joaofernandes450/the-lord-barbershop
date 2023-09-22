@@ -1,0 +1,10 @@
+.booking-frame {
+    width: 580px;
+    height: 620px
+}
+
+@media (max-width: 1024px) {
+    .booking-frame {
+        width: 100%;
+    }
+}
