@@ -3,6 +3,7 @@
     <div class="logo" fxLayout fxLayoutAlign="center ">
       <div class="header-logo-left" fxFlex fxLayoutAlign="center center">
         <img src="assets/logo.png" />
+        <!-- <img src="assets/official/the_lord_logo.png" /> -->
       </div>
 
       <div class="header-slider" fxFlex="30%" fxFlex.lt-md="100%" fxLayoutAlign="center stretch">
@@ -101,12 +102,12 @@
 
   <section>
     <div #stores class="stores stores-v2">
-      <h1>AS NOSSAS BARBEARIAS v2</h1>
+      <h1>AS NOSSAS BARBEARIAS</h1>
       <div class="stores-container mat-elevation-z0">
         <div class="store-layout" fxFlex fxLayout fxLayoutAlign="center center" fxLayoutGap="20px"
           fxLayout.lt-sm="column">
           <div *ngFor="let store of availableStores" fxLayout="column" fxLayoutAlign=" center" fxLayoutGap="5%">
-            <img class="store-image" mat-card-image src="assets/store-rosemary.jpg" (click)="openStore(store)" />
+            <img class="store-image" mat-card-image [src]="store.image" (click)="openStore(store)" />
             <div class="text-content text-content-v2" fxLayout="column" fxLayoutGap="10px"
               fxLayoutAlign="space-between start">
               <!-- <h2>{{ store.name }}</h2> -->
@@ -133,7 +134,7 @@
     <div #googleMaps class="google-maps">
       <a
         href="https://www.google.com/maps/dir/The+Lord+Barbershop+(Barbearia+The+Lord)/B+The+Travel+Brand+Ribeirao,+Avenida+Rio+Veir%C3%A3o+Empreendimento,+R.+Q.ta+da+Igreja+n%C2%BA+2+loja+2,+4760-715+Ribeir%C3%A3o/@41.3554295,-8.558381,17.29z/data=!4m13!4m12!1m5!1m1!1s0xd245f0db0ace52f:0xa11f9e8e92e22667!2m2!1d-8.5545208!2d41.3527768!1m5!1m1!1s0xd245f6b3415528f:0xac6270d179cfba5b!2m2!1d-8.5594827!2d41.357143?entry=ttu">
-        <img class="google-maps-image" src="assets/backgrounds/stores-map_pt-2048x602.png" />
+        <img class="google-maps-image" src="assets/official/map.png" />
       </a>
     </div>
   </section>

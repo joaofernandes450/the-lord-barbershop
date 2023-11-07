@@ -56,11 +56,11 @@ export class HomepageComponent implements OnInit {
    */
   populateStores(): void {
     const store1: Store = {
-      image: "assets/barbearia2.png", name: "The Lord Barbershop", address: "Rua de Bragadela, Loja 24, 4760-706", email: "barberthelord@gmail.com", phoneNumber: "+351 913 484 773", route: ''
+      image: "/assets/official/background.png", name: "The Lord Barbershop", address: "Rua de Bragadela, Loja 24, 4760-706", email: "barberthelord@gmail.com", phoneNumber: "+351 913 484 773", route: ''
     }
 
     const store2: Store = {
-      image: "assets/barbearia2.png", name: "The Lord Privé", address: "Avenida Rio Veirão, Loja 17, 4760-715", email: "barberthelord2@gmail.com", phoneNumber: "+351 913 484 773", route: ''
+      image: "assets/official/prive_store.png", name: "The Lord Privé", address: "Avenida Rio Veirão, Loja 17, 4760-715", email: "barberthelord2@gmail.com", phoneNumber: "+351 913 484 773", route: ''
     }
 
     this.availableStores.push(store1, store2);
@@ -82,6 +82,7 @@ export class HomepageComponent implements OnInit {
   }
 
   openStore(store: Store): void {
+    return;
     this.router.navigate(['/' + store.route])
   }
 }

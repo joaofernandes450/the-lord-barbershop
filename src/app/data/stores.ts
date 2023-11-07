@@ -26,7 +26,7 @@ export const STORES: Store[] =
             address: 'Rua de Bragadela, Loja 24, 4760-706',
             email: 'barberthelord@gmail.com',
             phoneNumber: '+351 913 484 773',
-            image: 'assets/barbearia2.png',
+            image: 'assets/official/classic_store.png',
             route: 'the-lord-barbershop',
             mapsLink: 'https://goo.gl/maps/b49PGPx3sfKRmiEb7'
         },
@@ -35,7 +35,7 @@ export const STORES: Store[] =
             address: 'Avenida Rio Veirão, Loja 17, 4760-715',
             email: 'barberthelord2@gmail.com',
             phoneNumber: '+351 913 484 773',
-            image: 'assets/barbearia.png',
+            image: 'assets/official/prive_store.png',
             route: 'the-lord-prive',
             mapsLink: 'https://goo.gl/maps/b49PGPx3sfKRmiEb7'
         }
