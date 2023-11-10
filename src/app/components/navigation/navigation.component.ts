@@ -14,14 +14,17 @@ import { ReservationDialogComponent } from '../reservation-dialog/reservation-di
 export class NavigationComponent {
 
   sidenavOpen: boolean = false;
+  showLogo: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     let element = document.querySelector('.navigation-bar') as HTMLElement;
     if (window.pageYOffset > element.clientHeight) {
       element.classList.add('scrolled');
+      this.showLogo = true;
     } else {
       element.classList.remove('scrolled');
+      this.showLogo = false;
     }
   }
 

@@ -62,7 +62,7 @@ h2 {
         font-size: 24px;
     }
     .footer-info {
-        width: 100%;
+        width: 80%;
         .store-button-anchor {
             z-index: 0;
             width: 50%;
@@ -86,6 +86,12 @@ h2 {
         img {
             max-width: 100px;
         }
+    }
+}
+
+.social-media-info {
+    img {
+        width: 30px;
     }
 }
 

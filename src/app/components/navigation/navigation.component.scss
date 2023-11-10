@@ -29,7 +29,8 @@
 }
 
 .navigation-bar.scrolled {
-  background-color: #fff !important;
+  // background-color: #fff !important;
+  background-image: url(./../../../assets/official/background.png);
   transition: background-color 200ms linear;
   color: goldenrod;
 }
@@ -60,6 +61,7 @@ img {
 @media (max-width: 1024px) {
   .navigation-logo {
     // translate: 12px;
+    visibility: hidden;
   }
 }
 

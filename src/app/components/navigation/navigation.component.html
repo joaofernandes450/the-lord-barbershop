@@ -18,17 +18,17 @@
     <mat-sidenav-content>
       <mat-toolbar class="navigation-bar" color="primary" fxLayoutAlign="center center" (scroll)="onWindowScroll()">
         <div class="navigation-actions" fxFlex="100%" fxFlex.lt-md="100%" fxLayout="row"
-          fxLayoutAlign="space-around center" fxLayoutAlign.lt-md="space-between center">
+          fxLayoutAlign="center center" fxLayoutAlign.lt-md="space-between center">
           <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
             *ngIf="isHandset$ | async">
             <mat-icon aria-label="Side nav toggle icon">{{sidenavOpen ? 'close' : 'menu'}}</mat-icon>
           </button>
           <div class="navigation-logo" fxLayout>
-            <a href="">
-              <img src="assets/official/the_lord_logo.png">
+            <a href="" *ngIf="showLogo">
+              <img src="assets/official/the_lord_logo_golden.png">
             </a>
           </div>
-          <div class="navigation-buttons" fxLayout fxLayoutAlign="center center" fxLayoutGap="20px" *ngIf="(isHandset$ | async) === false">
+          <!-- <div class="navigation-buttons" fxLayout fxLayoutAlign="center center" fxLayoutGap="20px" *ngIf="(isHandset$ | async) === false"> -->
             <!-- <button #menuButton mat-button [matMenuTriggerFor]="menu" #trigger="matMenuTrigger"
               (mouseenter)="trigger.openMenu()" (mouseout)="trigger.closeMenu()" [autofocus]="false">Lojas <mat-icon>
                 expand_more</mat-icon></button>
@@ -42,9 +42,9 @@
             <button mat-button>
               Dicas
             </button> -->
-            <button mat-flat-button (click)="openReservations()">
+            <!-- <button mat-flat-button (click)="openReservations()">
               Marcações
-            </button>
+            </button> -->
             <!-- <button mat-raised-button>
               Dicas
             </button>
@@ -54,7 +54,7 @@
             <button mat-stroked-button>
               Teste
             </button> -->
-          </div>
+          <!-- </div> -->
           <!-- <button mat-button>
             <mat-icon matBadgeColor=" warn" matBadgeOverlap="false" matBadgeSize="small">
               shopping_cart
