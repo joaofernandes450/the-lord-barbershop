@@ -1,7 +1,7 @@
-<div class="footer-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+<div class="footer-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxLayoutGap.lt-md="60px">
   <div class="footer-info" fxLayout fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap.lt-md="20%">
     <div class="stores" fxLayout="column" fxLayoutAlign="center " fxLayoutGap="25px" fxFlex>
-      <span class="header-text" fxLayout fxLayoutAlign.lt-md=" center"><strong>BARBEARIAS</strong></span>
+      <span class="header-text" fxLayout fxLayoutAlign.lt-md="center center"><strong>BARBEARIAS</strong></span>
       <div class="store-info" fxLayout="column" fxLayoutAlign.lt-md=" center" fxLayoutGap="5px"
         *ngFor="let store of dataService.getStores()">
         <span>{{store.name | uppercase}}</span>
@@ -16,50 +16,38 @@
     </div>
     <div class="social-media-info" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" fxFlex>
       <a href="https://www.instagram.com/thelordbarbersh0p/">
-        <!-- <button mat-icon-button color="primary">
-          <mat-icon>facebook</mat-icon>
-        </button> -->
         <img src="assets/socials/insta.png">
       </a>
       <a href="https://www.facebook.com/thelordprive/">
-        <!-- <button mat-icon-button color="warn">
-          <mat-icon>facebook</mat-icon>
-        </button> -->
         <img src="assets/socials/fb.png">
       </a>
-      <a href="https://www.instagram.com/thelordbarbersh0p/">
-        <!-- <button mat-icon-button color="warn">
-          <mat-icon>facebook</mat-icon>
-        </button> -->
-        <img src="assets/socials/insta.png">
+      <a href="https://www.tiktok.com/@thelord.pt/">
+        <img src="assets/socials/tiktok.png">
       </a>
     </div>
-    <div class="partners" fxLayout="column" fxLayoutAlign="center end" fxFlex>
+    <div class="partners" fxLayout="column" fxLayoutAlign="center end" fxFlex fxLayoutGap="15px">
       <a href="https://godisaman.com/">
-        <img src="assets/partners/god.png" />
+        <img src="assets/partners/GODISAMAN.png" />
       </a>
       <a href="https://uppercutdeluxe.com/">
-        <img src="assets/partners/uppercut.png" />
+        <img src="assets/partners/UPPERCUT.png" />
       </a>
-      <a href="https://godisaman.com/">
-        <img src="assets/partners/god.png" />
+      <a href="https://www.depotmaletools.com/en/">
+        <img src="assets/partners/DEPOT.png" />
       </a>
-      <a href="https://uppercutdeluxe.com/">
-        <img src="assets/partners/uppercut.png" />
+      <a href="https://www.reuzel.com/">
+        <img src="assets/partners/REUZEL.png" />
       </a>
-      <a href="https://godisaman.com/">
-        <img src="assets/partners/god.png" />
-      </a>
+      <!-- <a href="https://oilcangrooming.com/">
+        <img src="assets/partners/OIL_CAN.png" />
+      </a> -->
     </div>
   </div>
   <div class="footer-logo" fxLayout="column" fxLayoutAlign=" center" fxLayoutGap="20px">
     <img src="assets/official/the_lord_logo_golden.png" />
     <div class="footer-copyright" fxLayoutAlign=" center" fxLayout="column">
-      <!-- <div class="the-lord">
-        <span>The Lord</span>
-      </div> -->
       <div class="copyright">
-        <span>© 2021 The Lord. </span>
+        <span>© 2023 The Lord. </span>
         <span>All rights reserved</span>
       </div>
     </div>

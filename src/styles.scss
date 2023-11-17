@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%;  }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #e6e1d8 !important;}
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #e6e1d8 !important;
+}
+
 :host {
     background-color: #e6e1d8 !important;
+}
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

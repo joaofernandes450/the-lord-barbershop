@@ -96,9 +96,12 @@
   -moz-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   cursor: pointer;
+
   img {
-    object-fit: cover; /*this makes the image in src fit to the size specified below*/
-    width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    object-fit: cover;
+    /*this makes the image in src fit to the size specified below*/
+    width: 100%;
+    /* Here you can use wherever you want to specify the width and also the height of the <img>*/
     height: 80%;
   }
 }
@@ -153,11 +156,13 @@
 // }
 
 .reservations-button {
-  background-color: goldenrod;
-  color: white;
+  // background-color: goldenrod;
+  color: darkgreen;
+  background-image: url(./../../../assets/backgrounds/button_background.png);
 }
 
 @media (hover: none) {
+
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-content {
     visibility: visible;
@@ -178,15 +183,37 @@
 
 /* Medium and below screens */
 @media (max-width: 768px) {
+
   .header-logo-left,
   .header-logo-right {
     display: none !important;
   }
+
   .scroll-section-button {
     display: none !important;
   }
+
   .store-image {
     width: 100% !important;
+  }
+
+  .logo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../../assets/mobile/homepage_background.png);
+    background-position: center;
+    -webkit-backgroud-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+  .text-content-v2 {
+    font-size: 16px;
+  }
+
+  ::ng-deep .text-icon.material-icons {
+    font-size: 20px ;
   }
 }
 
@@ -195,6 +222,7 @@
   .temp img {
     width: 75% !important;
   }
+
   .store-image {
     width: 100% !important;
   }
@@ -219,6 +247,7 @@
 
 .google-maps {
   margin-bottom: 0;
+
   a {
     display: inline-block;
     vertical-align: top;
@@ -230,4 +259,8 @@
   width: 100%;
   height: auto;
   display: flex;
+}
+
+.barbershop-header-text {
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
 }

@@ -65,7 +65,7 @@ h2 {
         width: 80%;
         .store-button-anchor {
             z-index: 0;
-            width: 50%;
+            // width: 50%;
             .store-button {
                 border-color: white;
                 color: white;
@@ -102,5 +102,8 @@ h2 {
     }
     .stores {
         margin-top: 40px !important;
+    }
+    .store-info {
+        font-size: 12px;
     }
 }
