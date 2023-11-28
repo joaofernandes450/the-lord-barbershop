@@ -11,7 +11,8 @@
           <!-- <a mat-list-item [href]="store.route" *ngFor="let store of dataService.getStores()">{{store.name}}</a>
           <a mat-list-item href="#">Produtos</a> -->
           <!-- <a mat-list-item href="#">Dicas</a> -->
-          <a class="list-item" mat-list-item (click)="drawer.toggle(); openReservations()"><span class="list-text">Marcações</span></a>
+          <a class="list-item" mat-list-item (click)="drawer.toggle(); openReservations()"><span
+              class="list-text">Marcações</span></a>
         </mat-nav-list>
       </div>
     </mat-sidenav>
@@ -28,38 +29,6 @@
               <img src="assets/official/the_lord_logo_golden.png">
             </a>
           </div>
-          <!-- <div class="navigation-buttons" fxLayout fxLayoutAlign="center center" fxLayoutGap="20px" *ngIf="(isHandset$ | async) === false"> -->
-          <!-- <button #menuButton mat-button [matMenuTriggerFor]="menu" #trigger="matMenuTrigger"
-              (mouseenter)="trigger.openMenu()" (mouseout)="trigger.closeMenu()" [autofocus]="false">Lojas <mat-icon>
-                expand_more</mat-icon></button>
-            <mat-menu #menu="matMenu" [hasBackdrop]="false">
-              <button mat-menu-item>Item 1</button>
-              <button mat-menu-item>Item 2</button>
-            </mat-menu> -->
-          <!-- <button mat-button>
-              Produtos
-            </button>
-            <button mat-button>
-              Dicas
-            </button> -->
-          <!-- <button mat-flat-button (click)="openReservations()">
-              Marcações
-            </button> -->
-          <!-- <button mat-raised-button>
-              Dicas
-            </button>
-            <button mat-flat-button>
-              Marcações
-            </button>
-            <button mat-stroked-button>
-              Teste
-            </button> -->
-          <!-- </div> -->
-          <!-- <button mat-button>
-            <mat-icon matBadgeColor=" warn" matBadgeOverlap="false" matBadgeSize="small">
-              shopping_cart
-            </mat-icon>
-          </button> -->
         </div>
       </mat-toolbar>
       <div class="content-container">

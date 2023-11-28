@@ -44,7 +44,7 @@ export class StoreComponent implements OnInit {
       }
     },
     on: {
-      init() {}
+      init() { }
     }
   }
 
