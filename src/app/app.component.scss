@@ -1,34 +1,62 @@
 .right-button {
-    position: fixed;
-    right: 0;
-    margin-right: 10px;
-    bottom: 0;
-    margin-bottom: 20px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 1s,;
+  position: fixed;
+  right: 0;
+  margin-right: 10px;
+  bottom: 0;
+  margin-bottom: 20px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s, ;
 }
 
 .show {
-    opacity: 1;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+  opacity: 1;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.right-button {
+  // background: goldenrod;
+  color: darkgreen;
+  background-image: url(./../assets/backgrounds/button_background.png);
 }
 
 @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeOut {
-    from { opacity: 1; }
-      to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
+
 @keyframes fadeOut {
-    from { opacity: 1; }
-      to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }

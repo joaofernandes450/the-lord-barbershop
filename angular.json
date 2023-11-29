@@ -28,6 +28,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
+              "src/icon.png",
               "src/assets"
             ],
             "styles": [
@@ -105,9 +106,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
-  "defaultProject": "the-lord-barbershop"
+  "cli": {
+    "analytics": false
+  }
 }

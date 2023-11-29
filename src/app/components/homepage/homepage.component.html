@@ -1,108 +1,59 @@
-<div class="homepage-container" style="height: 100%;">
-    <section class="site-header">
-        <div class="logo" fxLayout fxLayoutAlign="center ">
-            <div class="header-logo-left" fxFlex fxLayoutAlign="center center">
-                <img src="assets/logo.png">
-            </div>
+<div class="homepage-container" style="height: 100%">
+  <section class="site-header">
+    <div class="logo" fxLayout fxLayoutAlign="center ">
 
-            <div class="header-slider" fxFlex="30%" fxFlex.lt-md="100%" fxLayoutAlign="center stretch">
-                <div class="header-slider-container" fxFlex fxLayout="column" fxLayoutAlign="space-evenly center">
-                    <div class="temp">
-                        <img src="assets/temp.png" style="width: 100%;">
-                    </div>
-                    <div>
-                        <p>Multiline text Multiline text Multiline text Multiline text Multiline text Multiline text
-                            Multiline text Multiline text Multiline text </p>
-                        <!-- <p>Multiline text Multiline text Multiline text Multiline text Multiline text Multiline text
-                            Multiline text Multiline text Multiline text </p> -->
-                    </div>
-                    <div>
-                        <button mat-flat-button color="warn" (click)="openReservations()">
-                            Marca Connosco
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="scroll-section-button" fxLayoutAlign="center center">
-                <button class="scroll-button" mat-mini-fab (click)="scroll(stores)">
-                    <mat-icon>expand_more</mat-icon>
-                </button>
-            </div> -->
-
-            <div class="header-logo-right" fxFlex fxLayoutAlign="center center">
-                <img src="assets/logo.png">
-            </div>
-
-            <!-- <div class="the-lord" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
-                <img src="assets/the_lord.png">
-                <button mat-flat-button color="warn">
-                    Marca Connosco
-                </button>
-    
-                <div class="scroll-section-button" fxLayoutAlign="center center">
-                    <button class="scroll-button" mat-mini-fab (click)="scroll(stores)">
-                        <mat-icon>expand_more</mat-icon>
-                    </button>
-                </div>
-            </div> -->
+      <div class="header-slider" fxFlex="30%" fxFlex.lt-md="100%" fxLayoutAlign="center stretch">
+        <div class="header-slider-container" fxFlex fxLayout="column" fxLayoutAlign="end center">
+          <div>
+          </div>
+          <div>
+            <button mat-flat-button class="reservations-button" (click)="openReservations()">
+              Marca Connosco
+            </button>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <div #stores class="stores">
-            <h1>AS NOSSAS BARBEARIAS</h1>
-            <div class="stores-container mat-elevation-z0">
-                <div class="store-layout" fxFlex fxLayout fxLayoutAlign="center center" fxLayoutGap="20px"
-                    fxLayout.lt-sm="column">
-                    <mat-card class="mat-elevation-z0" *ngFor="let store of availableStores" (click)="openStore(store)">
-                        <img mat-card-image src="{{store.image}}">
-                        <mat-card-content>
-                            <div class="text-content" fxLayout="column" fxLayoutGap="20px"
-                                fxLayoutAlign="space-between start">
-                                <h2>{{store.name}}</h2>
-                                <div fxLayout fxLayoutGap="10px">
-                                    <mat-icon>place</mat-icon>
-                                    <h4>{{store.address}}</h4>
-                                </div>
-                                <div fxLayout fxLayoutGap="10px">
-                                    <mat-icon>email</mat-icon>
-                                    <h4>{{store.email}}</h4>
-                                </div>
-                                <div fxLayout fxLayoutGap="10px">
-                                    <mat-icon>phone</mat-icon>
-                                    <h4>{{store.phoneNumber}}</h4>
-                                </div>
-                                <!-- <div class="card-socials">
-                                    <button mat-flat-button color="accent">
-                                        <mat-icon>arrow_forward</mat-icon>
-                                    </button>
-                                </div> -->
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-                </div>
-                <!-- <mat-grid-list cols="2" [gutterSize]="'10px'">
-                    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-                        <mat-card class="mat-elevation-z0" (click)="storeClicked(card)">
-                            <img mat-card-image src="assets/p.png">
-                            <mat-card-content>
-                                <div class="text-content" fxLayout="column" fxLayoutGap="20px"
-                                    fxLayoutAlign=" center">
-                                    <span>{{card.title}}</span>
-    
-    
-                                    <div class="card-socials">
-                                        <button mat-flat-button color="accent">
-                                            <mat-icon>arrow_forward</mat-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </mat-card-content>
-                        </mat-card>
-                    </mat-grid-tile>
-                </mat-grid-list> -->
+  <section>
+    <div #stores class="stores stores-v2">
+      <h1 class="barbershop-header-text">AS NOSSAS BARBEARIAS</h1>
+      <div class="stores-container mat-elevation-z0">
+        <div class="store-layout" fxFlex fxLayout fxLayoutAlign="center center" fxLayoutGap="20px"
+          fxLayout.lt-sm="column">
+          <div *ngFor="let store of availableStores" fxLayout="column" fxLayoutAlign=" center" fxLayoutGap="5%">
+            <img class="store-image" mat-card-image [src]="store.image" (click)="openStore(store)" />
+            <div class="text-content text-content-v2" fxLayout="column" fxLayoutGap="10px"
+              fxLayoutAlign="space-between start">
+              <!-- <h2>{{ store.name }}</h2> -->
+              <div fxLayout fxLayoutAlign=" center" fxLayoutGap="10px">
+                <mat-icon class="text-icon">place</mat-icon>
+                <span>{{ store.address }}</span>
+              </div>
+              <div fxLayout fxLayoutAlign=" center" fxLayoutGap="10px">
+                <mat-icon class="text-icon">email</mat-icon>
+                <span>{{ store.email }}</span>
+              </div>
+              <div fxLayout fxLayoutAlign=" center" fxLayoutGap="10px">
+                <mat-icon class="text-icon">phone</mat-icon>
+                <span>{{ store.phoneNumber }}</span>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div #googleMaps class="google-maps" fxLayout fxLayoutAlign="center center">
+      <div class="maps-container">
+        <a
+          href="https://www.google.com/maps/dir/The+Lord+Classic,+Loja+24+COMPLEXO+HABITACIONAL+DE+BRAGADELA,+LOJA+24,+4760-706/The+Lord+Prive,+Avenida+Rio+Veir%C3%A3o+loja+nr1,+Ribeir%C3%A3o/@41.355016,-8.5594675,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0xd245f0db0ace52f:0xa11f9e8e92e22667!2m2!1d-8.5545208!2d41.3527768!1m5!1m1!1s0xd245f9cfce13341:0xda99d62dc4f4aa43!2m2!1d-8.5594272!2d41.3572472?entry=ttu">
+          <img class="google-maps-image" src="assets/official/map_v2.png" />
+        </a>
+      </div>
+    </div>
+  </section>
 </div>

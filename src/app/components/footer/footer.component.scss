@@ -9,8 +9,8 @@ mat-toolbar {
     padding: 0;
 }
 
-mat-list-item {
-    color: lightgrey !important; 
+.mat-line {
+    color: lightgrey !important;
     min-width: 100%;
 }
 
@@ -54,9 +54,56 @@ h2 {
     padding: 0 16px;
 }
 
+.footer-container {
+    background-image: url(../../../assets/official/background.png);
+    color: white;
+    padding: 20px;
+    .header-text {
+        font-size: 24px;
+    }
+    .footer-info {
+        width: 80%;
+        .store-button-anchor {
+            z-index: 0;
+            // width: 50%;
+            .store-button {
+                border-color: white;
+                color: white;
+                cursor: pointer;
+                &:hover {
+                    background-color: goldenrod;
+                }
+                -webkit-transition: background-color 500ms linear;
+                -ms-transition: background-color 500ms linear;
+                transition: background-color 500ms linear;
+            }
+        }
+    }
+    .partners img {
+        max-width: 75px;
+    }
+    .footer-logo {
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+.social-media-info {
+    img {
+        width: 30px;
+    }
+}
+
 /* Medium and below screens */
 @media (max-width: 1024px) {
     .footer-copyright {
         text-align: center;
+    }
+    .stores {
+        margin-top: 40px !important;
+    }
+    .store-info {
+        font-size: 12px;
     }
 }

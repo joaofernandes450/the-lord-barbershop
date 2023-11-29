@@ -3,7 +3,11 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 100%;
+  height: 50%;
+  transform: translate3d(0, -100%, 0);
+  background-image: url(./../../../assets/official/background.png);
+  color: white;
 }
 
 .sidenav .mat-toolbar {
@@ -11,29 +15,47 @@
 }
 
 .navigation-bar {
-  position: -webkit-fixed; /* Safari */
+  position: -webkit-fixed;
   position: fixed;
-  top: 0; 
-  z-index: 1000; 
+  top: 0;
+  z-index: 1250;
   background-color: transparent;
-  transition: background-color 200ms linear;
   color: white;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease, visibility 0s ease 500ms, color 0s ease 500ms;
+  -moz-transition: opacity 500ms ease, visibility 0s ease 500ms, color 0s ease 500ms;
+  -o-transition: opacity 500ms ease, visibility 0s ease 500ms, color 0s ease 500ms;
+  -ms-transition: opacity 500ms ease, visibility 0s ease 500ms, color 0s ease 500ms;
+  transition: opacity 500ms ease, visibility 0s ease 500ms, color 0s ease 500ms;
 }
 
-.navigation-bar .mat-flat-button {
+.navigation-bar .mat-mdc-unelevated-button {
   background-color: goldenrod;
   color: white;
 }
 
 .navigation-bar.scrolled {
-  background-color: #fff !important;
-  transition: background-color 200ms linear;
+  background-image: url(./../../../assets/official/background.png);
+  color: goldenrod;
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease, visibility 0s ease 0s;
+  -moz-transition: opacity 500ms ease, visibility 0s ease 0s;
+  -o-transition: opacity 500ms ease, visibility 0s ease 0s;
+  -ms-transition: opacity 500ms ease, visibility 0s ease 0s;
+  transition: opacity 500ms ease, visibility 0s ease 0s;
+}
+
+.navigation-bar.open {
   color: goldenrod;
 }
 
 .navigation-logo img {
-  width: 60px;
+  width: 100px;
   height: auto;
+}
+
+.list-text {
+  color: goldenrod;
 }
 
 .content-container {
@@ -44,13 +66,19 @@ img {
   width: 100%;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
 ::ng-deep .mat-button-focus-overlay {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 /* Medium and below screens */
 @media (max-width: 1024px) {
   .navigation-logo {
-    translate: 12px;
+    // translate: 12px;
+    visibility: hidden;
   }
+}
+
+.mat-drawer-content {
+  z-index: auto !important;
 }

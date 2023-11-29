@@ -1,163 +1,234 @@
 .homepage-container {
-    height: 100%;
+  height: 100%;
 }
 
 .logo {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    // background-image: url("/assets/header.jpg") ;
-    background-position: center;
-    -webkit-backgroud-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../../assets/official/homepage_background_staff.png);
+  background-position: center;
+  -webkit-backgroud-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .header-logo-left img,
 .header-logo-right img {
-    width: 150px;
+  width: 150px;
 }
 
 .header-slider {
-    background-color: #423a38;
-    text-align: center;
-    // position: absolute;
+  // background-color: #423a38;
+  text-align: center;
+  // position: absolute;
 }
 
 .header-slider-container {
-    margin: 10% 20%; // Better looking
+  margin: 10% 20%; // Better looking
 }
 
 .the-lord img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .scroll-section-button {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 20px;
 }
 
-// .scroll-button {
-//     position: absolute;
-//     bottom: 0;
-//     right: 0;
-//     left: 0;
-//     margin-bottom: 20px;
-// }
-
 .stores {
-    margin: 30px 0;
+  padding: 30px 0;
+}
+
+.stores-v2 {
+  background-image: url(./../../../assets/official/background.png);
 }
 
 .stores h1 {
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #333;
-    padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+.stores-v2 h1 {
+  color: white;
 }
 
 .stores h1:after {
-    content: '';
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 150px;
-    margin: 10px auto;
+  content: "";
+  background: #333;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 10px auto;
+}
+
+.stores-v2 h1:after {
+  background-color: white;
 }
 
 .stores-container {
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-mat-card {
-    max-width: 250px;
-    background: #423a38;
-    -webkit-transition:  0.3s ease-out;
-    -moz-transition:  0.3s ease-out;
-    transition:  0.3s ease-out;
-    cursor: pointer;
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+.store-card {
+  max-width: 300px;
+  background: #423a38;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+
+  img {
+    object-fit: cover;
+    /*this makes the image in src fit to the size specified below*/
+    width: 100%;
+    /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 80%;
+  }
 }
 
 .text-content {
-    color: #ffd740;
+  margin-top: 16px;
+  color: #ffd740;
 }
 
-mat-card:hover {
-    cursor: pointer;
-    background: #ffd740;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    transition: background 0.3s ease;
+.text-content-v2 {
+  color: white;
+  font-size: 18px;
 }
 
-mat-card:hover .text-content {
-    color: #423a38;
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+.store-card:hover {
+  cursor: pointer;
+  background: #ffd740;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-// mat-card img{
-//     max-height: 100%;
-//     min-width: 50%;
-//     -webkit-transition: opacity 0.25s ease-in-out;
-//     -moz-transition: opacity 0.25s ease-in-out;
-//     transition: opacity 0.25s ease-in-out;
-// }
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+.store-card:hover .text-content {
+  color: #423a38;
+}
 
-// mat-card-content {
-//     color: white;
-//     font-size: 20px;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     -ms-transform: translate(-50%, -50%);
-//     cursor: none;
-//     pointer-events: none;
-//     cursor: pointer;
-// }
-  
-// mat-card img:hover + mat-card-content {
-//     visibility: visible;
-// }
+.reservations-button {
+  // background-color: goldenrod;
+  color: darkgreen;
+  background-image: url(./../../../assets/backgrounds/button_background.png);
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
+
+.store-image {
+  width: 75%;
+  transition: all 0.25s;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.store-image:hover {
+  transform: translateY(-20px);
+  background-color: red;
+  cursor: pointer;
+}
+
+.google-maps {
+  margin-bottom: 0;
+  background-image: url(./../../../assets/official/background.png);
+
+  .maps-container {
+    width: 50%;
+    margin: 2% 0;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+.google-maps-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.barbershop-header-text {
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
 
 @media (hover: none) {
-    mat-card-content {
-        visibility: visible;
-    }
-}
 
-// .dashboard-card {
-//     position: absolute;
-//     top: 15px;
-//     left: 15px;
-//     right: 15px;
-//     bottom: 15px;
-// }
-  
-// .dashboard-card-content {
-//     text-align: center;
-// }
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+  mat-card-content {
+    visibility: visible;
+  }
+}
 
 /* Medium and below screens */
 @media (max-width: 768px) {
-    .header-logo-left,
-    .header-logo-right{
-        display: none !important;
+
+  .header-logo-left,
+  .header-logo-right {
+    display: none !important;
+  }
+
+  .scroll-section-button {
+    display: none !important;
+  }
+
+  .store-image {
+    width: 100% !important;
+  }
+
+  .logo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../../assets/mobile/homepage_background_mobile.png);
+    background-position: center;
+    -webkit-backgroud-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+  .text-content-v2 {
+    font-size: 16px;
+  }
+
+  ::ng-deep .text-icon.material-icons {
+    font-size: 20px;
+  }
+
+  .google-maps {
+    .maps-container {
+      width: 100%;
+      margin: 0;
     }
-    .scroll-section-button {
-        display: none !important;
-    }
+  }
 }
 
 /* Small and below screens */
 @media (max-width: 1024px) {
-    .temp img {
-        width: 75% !important;
-    }
+  .temp img {
+    width: 75% !important;
+  }
+
+  .store-image {
+    width: 100% !important;
+  }
 }

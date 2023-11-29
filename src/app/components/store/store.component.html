@@ -4,9 +4,7 @@
             <div class="store-name" fxFlex fxLayout="column" fxLayoutAlign="center ">
                 <span>{{currentStore.name}}</span>
             </div>
-
             <div class="empty">
-
             </div>
         </div>
     </section>
@@ -21,7 +19,7 @@
 
             <div class="history-store-text">
                 <p>The Lord Barbershop é uma barbearia para o Homem Moderno, no mercado desde 2019.</p>
-                <p>Começou numa pequena aldeia onde a grande maioria estava habituada a “antiga” e típica barbearia.</p>
+                <p>Começou numa pequena aldeia onde a grande maioria estava habituada à “antiga” e típica barbearia.</p>
                 <p>Com o objetivo de alterar esse paradigma, nasceu uma barbearia, com espaço de lazer, com serviços de
                     beleza, oferecendo assim o melhor conforto para o cliente.</p>
             </div>
@@ -30,29 +28,29 @@
 
     <section class="staff">
         <h1>OS NOSSOS BARBEIROS</h1>
-        <div class="staff-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="100px">
-            <div class="staff-information" fxLayout fxLayoutGap="100px" fxLayout.lt-md="column" fxLayoutGap.lt-md="25px"
+        <div class="staff-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="50px">
+            <div class="staff-information" fxLayout fxLayout.lt-md="column" fxLayoutGap.lt-md="25px"
                 *ngFor="let staff of currentStaff; odd as isOdd;">
-                <div class="staff-image" [ngClass]="{'swap': isOdd}">
+                <div fxLayout fxLayoutAlign="end " class="staff-image" [ngClass]="{'': isOdd}">
                     <img src="{{staff.picture}}">
                 </div>
 
-                <div class="staff-info" fxFlex fxLayout="column" fxLayoutAlign="center " fxLayoutGap="12px"
-                    [ngClass]="{'left': isOdd}">
+                <div class="staff-info" fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="12px"
+                    [ngClass]="{'': isOdd}">
                     <div class="staff-name">
                         <p class="staff-name-header">{{staff.name}}</p>
-                        <p class="staff-name-subheader">{{staff.position}}</p>
+                        <!-- <p class="staff-name-subheader">{{staff.position}}</p> -->
                     </div>
 
                     <div class="staff-description">
                         <p>{{staff.description}}</p>
-                        <p>{{staff.description}}</p>
+                        <!-- <p>{{staff.description}}</p>
                         <p>Long text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,Long
                             text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,Long text,
                             Long text,
                             Long text, Long text,Long text, Long text,Long text, Long text,Long text, Long text,
                         </p>
-                        <p>{{staff.description}}</p>
+                        <p>{{staff.description}}</p> -->
                     </div>
 
                     <div class="staff-socials">
@@ -60,15 +58,17 @@
                             <button mat-icon-button color="primary">
                                 <mat-icon>facebook</mat-icon>
                             </button>
-                        </a> <a href="https://www.instagram.com/thelordbarbersh0p/">
-                            <button mat-icon-button color="primary">
-                                <mat-icon>facebook</mat-icon>
-                            </button>
-                        </a> <a href="https://www.instagram.com/thelordbarbersh0p/">
-                            <button mat-icon-button color="primary">
-                                <mat-icon>facebook</mat-icon>
-                            </button>
                         </a>
+                        <!-- <a href="https://www.instagram.com/thelordbarbersh0p/">
+                            <button mat-icon-button color="primary">
+                                <mat-icon>facebook</mat-icon>
+                            </button>
+                        </a> 
+                        <a href="https://www.instagram.com/thelordbarbersh0p/">
+                            <button mat-icon-button color="primary">
+                                <mat-icon>facebook</mat-icon>
+                            </button>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -79,14 +79,13 @@
         <h1>OS NOSSOS SERVIÇOS</h1>
         <div class="services-container">
             <div class="service-grid" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px grid">
-                <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="30%" *ngFor="let num of [1,2,3,4,5,6,7]">
-                    <mat-card class="service-card mat-elevation-z4">
+                <div fxFlex="20%" fxFlex.xs="50%" fxFlex.sm="20%" *ngFor="let num of [1,2,3,4,5,6,7]">
+                    <mat-card appearance="outlined" class="service-card mat-elevation-z4">
                         <img src="assets/logo.png">
                         <mat-card-content fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
                             <div class="service-type">
                                 Cabelo
                             </div>
-
                             <div class="service-price">
                                 {{ 7 | currency:'EUR'}}
                             </div>
@@ -100,12 +99,15 @@
     <section class="galery">
         <h1>GALERIA</h1>
         <div class="swiper-container">
-            <swiper [config]="swiperConfig">
+            <swiper-container #swiper init="false">
+                <swiper-slide *ngFor="let s of galleryImages"><img src="{{s}}" style="width: 100%; height: 300px;">
+                </swiper-slide>
+            </swiper-container>
+            <!-- <swiper [config]="swiperConfig">
                 <ng-template swiperSlide *ngFor="let s of galleryImages"><img src="{{s}}"
                         style="width: 100%; height: 300px;">
                 </ng-template>
-
-            </swiper>
+            </swiper> -->
         </div>
     </section>
 </div>
