@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href https://joaofernandes450.github.io/the-lord-barbershop/ && npx angular-cli-ghpages --dir=dist/the-lord-barbershop"
+    "deploy": "ng build --configuration production --base-href https://joaofernandes450.github.io/the-lord-barbershop/ && npx angular-cli-ghpages --dir=dist/the-lord-barbershop",
+    "server_build": "ng build --watch --configuration production"
   },
   "private": true,
   "dependencies": {
